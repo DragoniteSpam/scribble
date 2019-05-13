@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "257ad080-a44f-41b9-a9ec-27062938db6e",
+            "Value": {
+                "id": "1a38c5f8-2b9e-4266-832d-50ab78bff68d",
+                "resourcePath": "scripts\\scribble_debug\\scribble_debug.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2a816721-d173-4196-ae78-c6bd643d8100",
             "Value": {
                 "id": "beacae7a-2d9b-423b-abc0-7fc4c26af2c2",
@@ -771,6 +779,7 @@
         "bbaf2270-049d-4b2f-b134-efca33e50f7e",
         "aa4ca4db-ff31-4cd0-b9cc-08badea29bdd",
         "baaa6707-db8c-472e-90b1-562acc7d6c47",
+        "257ad080-a44f-41b9-a9ec-27062938db6e",
         "00fbc8f9-0e51-458c-8834-69a5cbc5e94b"
     ],
     "tutorial": ""

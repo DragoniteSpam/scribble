@@ -28,20 +28,20 @@ if (!is_real(_index) || (_index != floor(_index)) || (_index < 1) || (_index > (
 
 if ( ds_map_exists(global.__scribble_colours, _name) )
 {
-    show_debug_message("Scribble: WARNING! Flag name \"" + _name + "\" has already been defined as a colour" );
+    scribble_debug("Scribble: WARNING! Flag name \"" + _name + "\" has already been defined as a colour" );
     exit;
 }
 
 if ( ds_map_exists(global.__scribble_events, _name) )
 {
-    show_debug_message("Scribble: WARNING! Flag name \"" + _name + "\" has already been defined as an event" );
+    scribble_debug("Scribble: WARNING! Flag name \"" + _name + "\" has already been defined as an event" );
     exit;
 }
 
 var _old_name = global.__scribble_flags[? _index ];
 if (_old_name != undefined)
 {
-    show_debug_message("Scribble: WARNING! Overwriting flag index " + string(_index) + " \"" + _old_name + "\"");
+    scribble_debug("Scribble: WARNING! Overwriting flag index " + string(_index) + " \"" + _old_name + "\"");
     ds_map_delete(global.__scribble_flags, _old_name);
 }
 
@@ -49,4 +49,4 @@ if (_old_name != undefined)
 global.__scribble_flags[? _index ] = _name;
 global.__scribble_flags[? _name  ] = _index;
 
-show_debug_message("Scribble: Added flag name \"" + _name + "\" as index " + string(_index));
+scribble_debug("Scribble: Added flag name \"" + _name + "\" as index " + string(_index));

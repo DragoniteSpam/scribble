@@ -631,7 +631,7 @@ for(var _i = 0; _i < _separator_count; _i++)
                         var _command_string = string(_parameters_list[| 0]);
                         for(var _j = 1; _j < _parameter_count; _j++) _command_string += "," + string(_parameters_list[| _j]);
                         
-                        show_debug_message("Scribble: WARNING! Unrecognised command tag [" + _command_string + "]" );
+                        scribble_debug("Scribble: WARNING! Unrecognised command tag [" + _command_string + "]" );
                         _skip = true;
                     }
                 break;
@@ -1210,6 +1210,6 @@ ds_map_destroy(_texture_to_vbuff_map);
 
 
 
-show_debug_message("Scribble: scribble_create() took " + string((get_timer() - _timer)/1000) + "ms");
+scribble_debug("Scribble: scribble_create() took " + string((get_timer() - _timer)/1000) + "ms");
 
 return _json;

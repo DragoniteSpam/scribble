@@ -157,7 +157,7 @@ if ( variable_global_exists("__scribble_init_complete") )
     exit;
 }
 
-show_debug_message("\nScribble: Welcome to Scribble by @jujuadams! This is version " + __SCRIBBLE_VERSION + ", " + __SCRIBBLE_DATE);
+scribble_debug("\nScribble: Welcome to Scribble by @jujuadams! This is version " + __SCRIBBLE_VERSION + ", " + __SCRIBBLE_DATE);
 
 var _font_directory = argument0;
 var _default_font   = argument1;
@@ -167,7 +167,7 @@ if (__SCRIBBLE_ON_MOBILE)
 {
     if (_font_directory != "")
     {
-        show_debug_message("Scribble: Included Files work a bit strangely on iOS and Android. Please use an empty string for the font directory and place fonts in the root of Included Files.");
+        scribble_debug("Scribble: Included Files work a bit strangely on iOS and Android. Please use an empty string for the font directory and place fonts in the root of Included Files.");
         show_error("Scribble:\nGameMaker's Included Files work a bit strangely on iOS and Android.\nPlease use an empty string for the font directory and place fonts in the root of Included Files.\n ", true);
         exit;
     }
@@ -182,7 +182,7 @@ else
 //Check if the directory exists
 if ( !directory_exists(_font_directory) )
 {
-    show_debug_message("Scribble: WARNING! Font directory \"" + string(_font_directory) + "\" could not be found in \"" + game_save_id + "\"!");
+    scribble_debug("Scribble: WARNING! Font directory \"" + string(_font_directory) + "\" could not be found in \"" + game_save_id + "\"!");
 }
 
 //Check if the default font parameter is the correct datatype
@@ -320,7 +320,7 @@ if (_auto_scan)
 
                 if (asset_get_type(_font) != asset_font)
                 {
-                    show_debug_message("Scribble: WARNING! Autoscan found \"" + _file + "\", but \"" + _font + "\" was not found in the project");
+                    scribble_debug("Scribble: WARNING! Autoscan found \"" + _file + "\", but \"" + _font + "\" was not found in the project");
                 }
                 else
                 {
@@ -338,7 +338,7 @@ if (_auto_scan)
                     _data[ __SCRIBBLE_FONT.SEPARATION   ] = undefined;
                     global.__scribble_font_data[? _font ] = _data;
                     
-                    show_debug_message("Scribble: Autoscan added \"" + _font + "\" as a standard font");
+                    scribble_debug("Scribble: Autoscan added \"" + _font + "\" as a standard font");
                 }
             }
             
